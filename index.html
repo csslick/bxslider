@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>다기능slider.html</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- bx slider js-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<style>
+		body{
+			border: 1px solid #666;
+			max-width: 800px;
+			margin: 0 auto;
+			padding: 10px;
+		}
+		.bxslider{
+			width: 100%;
+/*			border: 2px solid red;*/
+		}
+		.bxslider img{ width: 100%;}
+		.bxslider .caption{
+			font-size: 12px;
+			color: #666;
+			text-align: center;
+			margin-top: 10px;
+		}
+		.bxslider .price{
+			text-align: center;
+			font-size: 12px;
+			font-weight: bold;
+			margin-top: 5px;
+		}
+	</style>
+</head>
+<body>
+	<h1>jQuery BX 슬라이더</h1><hr>
+	<h2>오늘의 파워 상품(광고)</h2>
+	<ul class="bxslider">
+		<!-- 자바스크립트로 추가 -->
+
+	</ul>
+	
+	<script>
+		$(function(){
+			
+			var img_length = 8; // 이미지 개수
+			var html = '';
+			
+			for(var i=1;i <= img_length;i++){
+					html += '<li>',
+					html += '<img src="images/' + i + '.jpg">'
+					html += '<div class="caption">판.매.1위 봄 신상 엔틱 드롭귀걸이 은침 롱 링 큐빅</div>',
+					html += '<div class="price">3,900</div></li>';
+			}
+
+			$('.bxslider').html(html);
+			
+			$('.bxslider').bxSlider({
+				auto: true,	// 자동 재생
+				captions: false,	// 캡션 사용 유무(true/false)
+				responsive: true,
+				minSlides: 4,	// 슬라이드 개수
+				maxSlides: 4, // 슬라이드 개수
+				slideWidth: 1600,
+				pause: 2000	// 정지시간
+				
+			});
+		});	
+	</script>
+</body>
+</html>
