@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css">
+  <style>
+    body{ background: #ccc;}
+    .bx-wrapper{
+        max-width: 960px !important;
+        margin: 0 auto;
+        background: transparent;
+        border: none;
+    }
+    .bxslider {
+
+      margin: 0 auto;
+      
+    }
+    .bxslider img{ width: 100%; }
+
+  </style>
+</head>
+<body>
+ 
+<div class="bxslider">
+    <div><img src="http://placehold.it/400x300/f80&text=1"></div>
+    <div><img src="http://placehold.it/400x300/080&text=2"></div>
+    <div><img src="http://placehold.it/400x300/08f&text=3"></div>
+    <div><img src="http://placehold.it/400x300/f80&text=4"></div>
+    <div><img src="http://placehold.it/400x300/080&text=5"></div>
+    <div><img src="http://placehold.it/400x300/08f&text=6"></div>
+    <div><img src="http://placehold.it/400x300/080&text=7"></div>
+    <div><img src="http://placehold.it/400x300/08f&text=8"></div>
+</div>
+  
+  <script>
+    var slider = $('.bxslider').bxSlider({
+      slideWidth: 1200,
+      minSlides: 4,
+      maxSlides: 3,
+      slideMargin: 20
+
+    })
+  </script>
+</body>
+</html>
